@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body><br><br><br>
-<table class="table">
+<table class="table table-striped ">
   <thead class="thead-dark">
     <tr>
       <th scope="col">ID</th>
@@ -19,6 +19,8 @@
       <th scope="col">Plate</th>
       <th scope="col">Company</th>
       <th scope="col">Vehicle Name</th>
+      <th scope="col">Vehicle Type</th>
+      <th scope="col">Service Type</th>
       <th scope="col">Request</th>
       <th scope="col">Date</th>
 
@@ -39,6 +41,8 @@
                                 <th ><?php echo $row['plate']?></th>
                                 <th ><?php echo $row['company']?></th>
                                 <th ><?php echo $row['vehiclename']?></th>
+                                <th ><?php echo $row['vehicle_type']?></th>
+                                <th ><?php echo $row['service_type']?></th>
                                 <th ><?php echo $row['request']?></th>
                                 <th ><?php echo $row['date']?></th>
                                 </tr>

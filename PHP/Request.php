@@ -5,11 +5,13 @@ if (isset($_POST['send'])) {
     $Driver_Name=$_POST['drivername'];
     $Plate_Code=$_POST['platecode'];
     $Plate=$_POST['plate'];
-     $Company=$_POST['company'];
+    $Company=$_POST['company'];
     $vehicle_Name=$_POST['vehiclename'];
+    $Service_Type=$_POST['Service_Type'];
+    $vehicle_type=$_POST['vehicle_type'];
     $Request=$_POST['request'];
-  
-    $input="INSERT INTO request_for_car_service(date,drivername,platecode,plate,company,vehiclename,request) VALUES ('$Date','$Driver_Name','$Plate_Code','$Plate','$Company','$vehicle_Name','$Request')";
+    
+    $input="INSERT INTO request_for_car_service(date,drivername,platecode,plate,company,vehiclename,vehicle_type,Service_Type,request) VALUES ('$Date','$Driver_Name','$Plate_Code','$Plate','$Company','$vehicle_Name','$vehicle_type','$Service_Type','$Request')";
     $input_request=mysqli_query($conn,$input);
 
     if ($input_request) {
@@ -90,7 +92,7 @@ if (isset($_POST['send'])) {
     <select name="vehiclename" id="">
 
         <option value=" "></option>
-        <option value="Mercedes-Benz">Mercedes-Benz</option>
+        <option value="Mercedes_Benz">Mercedes-Benz</option>
         <option value="Totota">Totota</option>
         <option value="Lexus">Lexus</option>
         <option value="Bmw">Bmw</option>
@@ -101,7 +103,7 @@ if (isset($_POST['send'])) {
         <option value="Kia">Kia</option>
     </select><br><br>
     <label for="Name"class="lable">vehicle Type</label><br><br>
-    <select name="vehiclename" id="">
+    <select name="vehicle_type" id="">
 
         <option value=" "></option>
         <option value="Bus">Bus</option>
@@ -110,9 +112,9 @@ if (isset($_POST['send'])) {
      
     </select><br><br>
     <label for="Name"class="lable">Service Type</label><br><br>
-    <select name="vehiclename" id="">
+    <select name="Service_Type" id="">
 
-        <option value=" "></option>
+        <option value="Service_Type"></option>
         <option value="car washing">car washing</option>
         <option value="Bolo">Bolo</option>
         <option value="Body">Body</option>
