@@ -227,10 +227,10 @@ padding: 40PX;
   
     
 
-    font-family: "Protest Revolution", sans-serif;
+    /* font-family: "Protest Revolution", sans-serif;
     font-weight: 400;
     font-style: normal;
-    cursor: auto;
+    cursor: auto; */
 
 }
 .main-part .dialog:hover{
@@ -245,9 +245,9 @@ padding: 40PX;
     font-weight: bold;
     text-shadow:  2px 2px 13px rgb(239,76,37);
 
-font-family: "Protest Revolution", sans-serif;
+/* font-family: "Protest Revolution", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: normal; */
 }
 
 .our-product {
@@ -285,7 +285,7 @@ overflow: hidden;
 @keyframes slide {
 
     from{
-        transform:translateX(200px);
+        transform:translateX(110px);
   
 
     }
@@ -315,12 +315,34 @@ overflow: hidden;
 .arrow {
     color: rgb(239,76,37);
 text-align: center;
-text-shadow:  2px 2px 13px rgb(239,76,37);
+
+
 
 }
 .arrow span{
- font-size: 50px;
+    z-index: -1;
 
+ font-size: 50px;
+transition: all 0.5 ease 0s;
+animation: sura 2s alternate infinite;
+
+}
+@keyframes sura {
+    from{
+        color: rgb(239,76,37);
+       transform: translateY(50px);
+text-shadow:  2px 2px 8px rgb(239,76,37);
+
+    }
+    to{
+text-shadow:  rgba(20, 221, 13, 0.678);
+      
+        transform: translateY(-50px);
+        color: rgba(20, 221, 13, 0.678);
+
+
+
+    }
 }
 .google-map{
    text-align: center;
